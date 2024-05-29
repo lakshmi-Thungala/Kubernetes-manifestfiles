@@ -1,17 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-queue
+  name: dev-app-ingress
 spec:
   rules:
-  - host: queue.myweb.com
+  - host: queue.mywebapp.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: sts-queue
+            name: webapp
             port:
               number: 8161
   ingressClassName: nginx
+
