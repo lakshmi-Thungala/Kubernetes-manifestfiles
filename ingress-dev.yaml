@@ -4,7 +4,7 @@ metadata:
   name: dev-app-ingress
 spec:
   rules:
-  - host: queue.mywebapp.com
+  - host: dev.mywebapp.com
     http:
       paths:
       - path: /
